@@ -5,15 +5,6 @@ function setScrolls() {
 	});
 }
 
-function setUpslideshow() {
-	const slides = $(".slideshow .image-container");
-	var index = 0;
-	var currentSlide = $(slides[index]);
-
-	currentSlide.show();
-}
-
 $(document).ready(function() {
-	setUpslideshow();
 	setScrolls();
 });
