@@ -20,8 +20,9 @@ section {
 
 section div.top {
 	display: flex;
-  align-items: center;
+  position: relative;
   height: 70vh;
+  background-size: cover;
 }
 
 section div.bottom {
@@ -115,26 +116,36 @@ section#personalise-name .bottom .image-container img {
 	border-radius: 50%;
 }
 
-section .top .headings {
-	margin: 0 auto;
+section#design .top .headings, section#name .top .headings, section#get-in-touch .top .headings {
+  color: purple;
+  border-bottom: purple solid;
 }
 
-section .top .headings h2 {
+section#name div.top {
+  flex-direction: column;
+  align-items: center;
+}
+
+.headings {
+  margin: 0 auto;
+  text-align: right;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.headings h2, .headings h3 {
+  text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
+  margin: 15px;
+}
+
+.headings h2 {
 	font-size: 30px;
   font-weight: 100;
-  text-align: center;
-  color: white;
-  text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
 }
 
-section .top .headings h3 {
-	text-align: center;
-  margin: 15px;
-  color: white;
-  text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
-}
-
-section#copy .top .headings a {
+.headings a {
   width: 100px;
   margin-top: 50px;
 }
@@ -161,6 +172,8 @@ form input.text-box {
   border: none;
   border-bottom: 1px solid gainsboro;
   color: purple;
+  font-size: 20px;
+  font-weight: 100;
 }
 
 form input.submit-button {
@@ -192,6 +205,63 @@ section#order-form .bottom {
 
 .step {
   flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+div.bag-list {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+div.bag-list .bag-list-item {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+div.bag-list .bag-list-item img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.bag-list-item.selected {
+  transform: scale(1.2);
+  border-bottom: purple solid 2px;
+}
+
+.bag-name-background {
+  height: 50%;
+  flex: 5;
+  background-size: cover;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.bag-name-preview-field {
+  flex: 1;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+  border-bottom: 1px solid gainsboro;
+  text-transform: capitalize;
+}
+
+.bag-name-preview-text {
+  color: purple;
+  margin: 0 auto;
+  text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
+  font-size: 70px;
+  font-weight: 100;
+  text-transform: capitalize;
+  transform: rotate(-5deg);
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }
 
 @media only screen and (max-width: 800px) {

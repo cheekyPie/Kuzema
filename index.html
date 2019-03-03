@@ -14,15 +14,11 @@
 
   <body>
     <header>
-      <span class='top header-section'>
-        <a href='https://www.instagram.com/kuzema_personal.gifts/'>
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-      </span>
+      <span class='top header-section'></span>
 
       <span class='centre header-section'>
         <a href='index.html' class='header-logo'>
-          <h1>kuzema</h1>
+          <h1>- kuzema -</h1>
         </a>
       </span>
 
@@ -33,42 +29,62 @@
 
     <main>
       <section id='copy'>
-        <div class='top' style="background-image: url('images/20.png');">
+        <div class='top' style="background-image: url('images/21.jpg');">
           <div class='headings'>
-            <h2>KUZEMA Personalised Backpacks</h2>
-            <h3>The perfect gift</h3>
+            <h2>Personalised Backpacks</h2>
+            <h3>by KUZEMA</h3>
           </div>
         </div>
 
         <span class='bottom header-section'>
-          <a href='#how-it-works' class='scroll-link scroll-down button'>How it works</a>
+          <a href='#design' class='scroll-link scroll-down button'>Select a design</a>
         </span>
       </section>
 
-      <section id='how-it-works'>
+      <section id='design'>
         <div class='top'>
-          <div class='step'>
-            <div class='image-container'>
-              <img src='images/1.png'>
+          <div class='bag-list'>
+            <div class='bag-list-item'>
+              <img src='images/flowers.jpeg'>
             </div>
-
-            <p>1. Select a design</p>
+            <div class='bag-list-item'>
+              <img src='images/badgers.png'>
+            </div>
+            <div class='bag-list-item'>
+              <img src='images/toys.jpg'>
+            </div>
+            <div class='bag-list-item'>
+              <img src='images/rockets.jpg'>
+            </div>
+            <div class='bag-list-item'>
+              <img src='images/unicorns.jpg'>
+            </div>
+            <div class='bag-list-item'>
+              <img src='images/flamingos.jpg'>
+            </div>
           </div>
 
-          <div class='step'>
-            <div class='image-container'>
-              <img src='images/2.png'>
-            </div>
-
-            <p>2. Add a name</p>
+          <div class='headings'>
+            <h2>1. Select a design</h2>
+            <h3>Choose from our range of patterns</h3>
           </div>
+        </div>
 
-          <div class='step'>
-            <div class='image-container'>
-              <img src='images/5.png'>
-            </div>
+        <span class='bottom header-section'>
+          <a href='#name' class='scroll-link scroll-down button'>Add a name</a>
+        </span>
+      </section>
 
-            <p>3. Do something else</p>
+      <section id='name'>
+        <div class='top'>
+          <div class='bag-name-background image-container' style="background-image: url('images/name-background.jpg');">
+            <p class='bag-name-preview-text'>Your name</p>
+          </div>
+          <input type='text' class='bag-name-preview-field' placeholder="Enter name here..." maxlength='12'>
+
+          <div class='headings'>
+            <h2>2. Add a name</h2>
+            <h3>Max 12 characters</h3>
           </div>
         </div>
 
@@ -81,11 +97,11 @@
         <div class='top'>
           <div class='step'>
             <form>
-              <h3>Fill out your details:</h3>
-
-              <input type='text' name='name' placeholder='Your name' class='text-box'>
-              <input type='text' name='number' placeholder='Your telephone number' class='text-box'>
-              <input type='email' name='email' placeholder='Your email address' class='text-box'>
+              <input type='hidden' name='bag-design' class='bag-design-field'>
+              <input type='hidden' name='bag-name' class='bag-name-field'>
+              <input type='text' name='customer-name' placeholder='Your name' class='text-box'>
+              <input type='text' name='customer-number' placeholder='Your telephone number' class='text-box'>
+              <input type='email' name='customer-email' placeholder='Your email address' class='text-box'>
 
               <input type='submit' value='Send order' class='submit-button button'>
             </form>
@@ -93,8 +109,13 @@
 
           <div class='step hide'>
             <div class='image-container'>
-              <img src='images/14.png'>
+              <img src='images/flowers.jpeg' class='bag-preview'>
             </div>
+          </div>
+
+          <div class='headings'>
+            <h2>3. Phil out your details</h2>
+            <h3>We will be in touch to confirm your order</h3>
           </div>
         </div>
       </section>
