@@ -18,7 +18,7 @@
 
       <span class='centre header-section'>
         <a href='index.html' class='header-logo'>
-          <h1>- kuzema -</h1>
+          <h1>kuzema</h1>
         </a>
       </span>
 
@@ -77,7 +77,7 @@
 
       <section id='name'>
         <div class='top'>
-          <div class='bag-name-background image-container' style="background-image: url('images/name-background.jpg');">
+          <div class='bag-name-background image-container' style="background-image: url('images/flowers.jpeg');">
             <p class='bag-name-preview-text'>Your name</p>
           </div>
           <input type='text' class='bag-name-preview-field' placeholder="Enter name here..." maxlength='12'>
@@ -95,29 +95,35 @@
 
       <section id='get-in-touch'>
         <div class='top'>
-          <div class='step'>
-            <form>
-              <input type='hidden' name='bag-design' class='bag-design-field'>
-              <input type='hidden' name='bag-name' class='bag-name-field'>
-              <input type='text' name='customer-name' placeholder='Your name' class='text-box'>
-              <input type='text' name='customer-number' placeholder='Your telephone number' class='text-box'>
-              <input type='email' name='customer-email' placeholder='Your email address' class='text-box'>
+          <div class='triangle'></div>
+          <div class='triangle-text'>Free gift box and personalisation with all orders</div>
 
-              <input type='submit' value='Send order' class='submit-button button'>
+          <div class='step'>
+            <form action="https://www.getdrip.com/forms/523804487/submissions" method="post" data-drip-embedded-form="523804487">
+              <input type="email" id="drip-email" name="fields[email]" placeholder='Your email address' class='text-box' required="true" />
+              <input type="text" id="drip-customer-name" name="fields[customer_name]" placeholder='Your Name' class='text-box' required="true" />
+              <input type="tel" id="drip-customer-telephone-number" name="fields[customer_telephone_number]" placeholder='Your telephone number' class='text-box' required="true" />
+              <input type="hidden" id="drip-bag-design" name="fields[bag_design]" class='bag-design-field' value="not selected" />
+              <input type="hidden" id="drip-bag-name" name="fields[bag_name]" class='bag-name-field' value="not selected" />
+
+              <input type="submit" value="Send order" data-drip-attribute="sign-up-button" class='submit-button button' />
             </form>
           </div>
+
 
           <div class='step hide'>
             <div class='image-container'>
               <img src='images/flowers.jpeg' class='bag-preview'>
             </div>
           </div>
+        </div>
 
+        <span class='bottom'>
           <div class='headings'>
             <h2>3. Phil out your details</h2>
-            <h3>We will be in touch to confirm your order</h3>
+            <h3>We will be in touch to confirm your details</h3>
           </div>
-        </div>
+        </span>
       </section>
     </main>
   </body>

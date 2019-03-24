@@ -226,7 +226,7 @@ div.bag-list .bag-list-item img {
   cursor: pointer;
 }
 
-.bag-list-item.selected {
+.bag-list-item img.selected {
   transform: scale(1.2);
   border-bottom: purple solid 2px;
 }
@@ -252,9 +252,9 @@ div.bag-list .bag-list-item img {
 
 .bag-name-preview-text {
   color: purple;
-  margin: 0 auto;
+  margin: 90px auto 0;
   text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
-  font-size: 70px;
+  font-size: 30px;
   font-weight: 100;
   text-transform: capitalize;
   transform: rotate(-5deg);
@@ -262,6 +262,31 @@ div.bag-list .bag-list-item img {
 
 textarea:focus, input:focus{
   outline: none;
+}
+
+div.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 170px 170px 0 0;
+  border-color: purple transparent transparent transparent;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+div.triangle-text {
+  width: 150px;
+  height: 50px;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  font-weight: 100;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 38px;
+  left: -10px;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -287,5 +312,24 @@ textarea:focus, input:focus{
 
   .step .image-container {
     height: 65%;
+  }
+
+  section#design .top .headings, section#name .top .headings, section#get-in-touch .headings {
+    border-bottom: none;
+    color: purple;
+  }
+
+  .headings {
+    left: 0;
+    text-align: center;
+  }
+
+  .bag-name-background {
+    width: 100%;
+    flex: 5;
+  }
+
+  .bag-name-preview-field {
+    flex: 5;
   }
 }

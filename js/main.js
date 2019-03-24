@@ -4,35 +4,34 @@ function setScrolls() {
 		const anchorId = $(this)[0].hash;
 		$("html, body").animate({ scrollTop: $(anchorId).offset().top }, "slow");
 	});
-}
+};
 
 function setBagListItemClickEvents() {
 	$('.bag-list-item').click(function() {
-		$('.bag-list-item').removeClass('selected');
-		$(this).addClass('selected');
+		$('.bag-list-item img').removeClass('selected');
+		$(this).children('img').addClass('selected');
 		const locationParts = this.children[0].src.split('/');
 		const fileName = locationParts[locationParts.length - 1];
 		$('.bag-design-field').val(fileName);
 		const bagPreviewImage = $('.bag-preview');
 		bagPreviewImage.attr("src", ('images/' + fileName));
 	})
-}
+};
 
 function setBagNamePreviewChangeEvent() {
-	console.log($('.bag-name-preview-field'))
 	$('.bag-name-preview-field').on('input', function() {
 		const name = this.value;
     $('.bag-name-preview-text').text(name);
     $('.bag-name-field').val(name);
 	});
-}
+};
 
 function setCoverImage() {
 	const coverImageFileName = getUrlParameter('cover') || '21.jpg';
 	const cssValue = 'url(images/' + coverImageFileName + ')';
 	const heroContainer = $('#copy .top');
 	heroContainer.css('background-image', cssValue);
-}
+};
 
 function getUrlParameter(sParam) {
   var sPageURL = window.location.search.substring(1),
